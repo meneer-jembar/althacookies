@@ -1,0 +1,319 @@
+/* artikel-style.css */
+
+/* Konfigurasi Dasar & Variabel Warna */
+:root { /* Menggunakan :root agar variabel global */
+    --font-family-poppins: 'Poppins', sans-serif;
+    --font-family-playfair: 'Playfair Display', serif;
+
+    --color-peach: #FDE6CE;
+    --color-peach-light: #FFF7F0; 
+    --color-lavender: #E0D8F7;
+    --color-lavender-light: #F5F3FF; 
+    --color-purple-accent: #7C3AED;
+    --color-purple-dark: #5B21B6; 
+    --color-text-dark: #37282C;  
+    --color-text-medium: #5F5054;
+    --color-text-light: #8A7F81; 
+    --color-bg-light: #FFFFFF;    
+    --color-footer-bg: #F9FAFB;  
+    --color-border-soft: #E5E7EB;
+}
+
+body {
+    font-family: var(--font-family-poppins);
+    color: var(--color-text-dark);
+    background-color: var(--color-bg-light);
+    -webkit-font-smoothing: antialiased; /* Tailwind's antialiased */
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Kelas Helper untuk Font (gunakan di HTML jika perlu) */
+.font-heading { font-family: var(--font-family-playfair); }
+.font-subheading { font-family: var(--font-family-poppins); font-weight: 600; }
+
+/* Styling Umum untuk Elemen di dalam Kontainer Artikel */
+/* Targetkan elemen di dalam .content-area */
+
+.content-area h1.article-title {
+    font-size: 2.25rem; /* text-4xl */
+    line-height: 2.5rem;
+    font-family: var(--font-family-playfair);
+    font-weight: 700; /* Asumsi Playfair Display diimpor dengan weight 700-900 */
+    color: var(--color-text-dark);
+    margin-bottom: 1rem; /* mb-4 */
+    text-align: center;
+}
+@media (min-width: 768px) { /* md: */
+    .content-area h1.article-title {
+        font-size: 3rem; /* md:text-5xl */
+        line-height: 1; 
+    }
+}
+
+.content-area .article-meta {
+    font-size: 0.875rem; /* text-sm */
+    line-height: 1.25rem;
+    color: var(--color-text-light);
+    margin-bottom: 2rem; /* mb-8 */
+    text-align: center;
+}
+.content-area .article-meta a {
+    color: var(--color-text-light); /* Link di meta warnanya sama */
+    text-decoration: none;
+}
+.content-area .article-meta a:hover {
+    color: var(--color-purple-accent);
+    text-decoration: underline;
+}
+
+.content-area h2.section-title {
+    font-size: 1.875rem; /* text-3xl (Tailwind text-3xl is 1.875rem) */
+    line-height: 2.25rem;
+    font-family: var(--font-family-playfair);
+    color: var(--color-purple-accent);
+    margin-top: 2.5rem; /* mt-10 */
+    margin-bottom: 1.25rem; /* mb-5 */
+    padding-bottom: 0.5rem; /* pb-2 */
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--color-lavender);
+}
+@media (min-width: 768px) { /* md: (jika ada) */
+    /* .content-area h2.section-title {
+        /* Ukuran tetap sama sesuai @apply sebelumnya, bisa disesuaikan jika ada prefix md: */
+    } */
+
+
+
+.content-area h3.subsection-title {
+    font-size: 1.5rem; /* text-2xl (Tailwind text-2xl is 1.5rem) */
+    line-height: 2rem;
+    font-family: var(--font-family-poppins);
+    font-weight: 600;
+    color: var(--color-text-dark);
+    margin-top: 2rem; /* mt-8 */
+    margin-bottom: 1rem; /* mb-4 */
+}
+
+.content-area p {
+    color: var(--color-text-medium);
+    margin-bottom: 1.25rem; /* mb-5 */
+    line-height: 1.75; /* leading-relaxed */
+    font-size: 1rem; /* text-base */
+}
+@media (min-width: 768px) { /* md: */
+    .content-area p {
+        line-height: 2; /* md:leading-loose */
+        font-size: 1.125rem; /* md:text-lg */
+    }
+}
+
+.content-area ul, .content-area ol {
+    color: var(--color-text-medium);
+    margin-bottom: 1.25rem; /* mb-5 */
+    padding-left: 1.75rem; /* pl-5 (approx, Tailwind pl-5 is 1.25rem, list-inside adds some) */
+    font-size: 1rem; /* text-base */
+    line-height: 1.75; /* leading-relaxed */
+}
+.content-area ul li, .content-area ol li {
+    margin-bottom: 0.5rem; /* space-y-2 */
+}
+.content-area ul { list-style-type: disc; }
+.content-area ol { list-style-type: decimal; }
+
+@media (min-width: 768px) { /* md: */
+    .content-area ul, .content-area ol {
+        font-size: 1.125rem; /* md:text-lg */
+        line-height: 2; /* md:leading-loose */
+    }
+}
+
+.content-area strong {
+    font-weight: 600; /* font-semibold */
+    color: var(--color-text-dark);
+}
+
+.content-area a { /* Link umum di dalam konten artikel */
+    color: var(--color-purple-accent);
+    text-decoration: underline;
+}
+.content-area a:hover {
+    color: var(--color-purple-dark);
+}
+
+.content-area img.article-image-full {
+    width: 100%;
+    height: auto;
+    margin-top: 2rem; /* my-8 */
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
+    border-radius: 0.75rem; /* rounded-xl */
+    overflow: hidden; /* untuk memastikan rounded corners pada gambar */
+}
+.content-area figure {
+    margin-top: 2rem; /* my-8 */
+    margin-bottom: 2rem;
+}
+.content-area figcaption {
+    font-size: 0.75rem; /* text-xs */
+    text-align: center;
+    margin-top: 0.5rem; /* mt-2 */
+    color: var(--color-text-light);
+}
+
+/* Styling untuk Kotak Highlight */
+.highlight-box {
+    margin-top: 2rem; /* my-8 */
+    margin-bottom: 2rem;
+    padding: 1.5rem; /* p-6 */
+    background-color: var(--color-peach-light);
+    border-left-width: 4px;
+    border-left-style: solid;
+    border-left-color: var(--color-peach);
+    border-top-right-radius: 0.5rem; /* rounded-r-lg */
+    border-bottom-right-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+}
+.highlight-box h3, .highlight-box .subsection-title { /* subsection-title adalah kelas yang dipakai sebelumnya */
+    font-size: 1.25rem !important; /* !text-xl */
+    font-family: var(--font-family-poppins) !important;
+    font-weight: 600 !important;
+    color: var(--color-text-dark) !important;
+    margin-top: 0 !important;
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0.75rem !important; /* Beri sedikit margin bawah untuk h3 di highlight box */
+}
+
+/* Styling untuk Tombol CTA Umum */
+.cta-button {
+    display: inline-block;
+    background-color: #F3BA9E;
+    color: white;
+    font-weight: 700; /* font-bold */
+    padding: 1rem 2.5rem; /* px-10 py-4 */
+    border-radius: 0.5rem; /* rounded-lg */
+    text-decoration: none;
+    font-size: 1.125rem; /* text-lg */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.cta-button:hover {
+    background-color:#DAA68C;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* shadow-xl */
+}
+
+/* Styling untuk Header Brand dan Footer (bisa juga diletakkan di CSS global jika ada) */
+header.site-header { /* Beri kelas ini pada tag <header> brand */
+    background-color: white;
+    border-bottom: 1px solid var(--color-border-soft);
+}
+header.site-header .container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem; /* px-6 */
+    padding-right: 1.5rem;
+    padding-top: 1.25rem; /* py-5 */
+    padding-bottom: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header.site-header .brand-logo {
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 700;
+    color: var(--color-purple-accent);
+    font-family: var(--font-family-playfair);
+    text-decoration: none;
+}
+header.site-header .nav-link {
+    font-size: 0.875rem; /* text-sm */
+    color: var(--color-text-medium);
+    text-decoration: none;
+}
+header.site-header .nav-link:hover {
+    color: var(--color-purple-dark);
+}
+
+/* Article Title Header Section */
+.article-title-header {
+    background-color: var(--color-lavender-light);
+    padding-top: 3rem; /* py-12 */
+    padding-bottom: 3rem;
+}
+@media (min-width: 768px) { /* md: */
+    .article-title-header {
+        padding-top: 4rem; /* md:py-16 */
+        padding-bottom: 4rem;
+    }
+}
+.article-title-header .container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem; /* px-6 */
+    padding-right: 1.5rem;
+}
+
+
+/* Main Content Area */
+main.main-content .container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem; /* px-6 */
+    padding-right: 1.5rem;
+    padding-top: 2rem; /* py-8 */
+    padding-bottom: 2rem;
+}
+@media (min-width: 768px) { /* md: */
+    main.main-content .container {
+        padding-top: 3rem; /* md:py-12 */
+        padding-bottom: 3rem;
+    }
+}
+main.main-content .article-wrapper { /* Wrapper untuk .content-area */
+    max-width: 48rem; /* max-w-3xl (Tailwind max-w-3xl is 48rem) */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Footer */
+footer.site-footer {
+    background-color: var(--color-footer-bg);
+    color: var(--color-text-medium);
+    padding-top: 2.5rem; /* py-10 */
+    padding-bottom: 2.5rem;
+    margin-top: 4rem; /* mt-16 */
+    border-top: 1px solid var(--color-border-soft);
+}
+footer.site-footer .container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem; /* px-6 */
+    padding-right: 1.5rem;
+    text-align: center;
+}
+footer.site-footer .footer-brand-logo {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 700;
+    color: var(--color-purple-accent);
+    font-family: var(--font-family-playfair);
+    margin-bottom: 0.5rem; /* mb-2 */
+    display: inline-block;
+    text-decoration: none;
+}
+footer.site-footer .copyright-text {
+    font-size: 0.875rem; /* text-sm */
+}
+footer.site-footer .social-links {
+    margin-top: 1rem; /* mt-4 */
+}
+footer.site-footer .social-links a {
+    margin-left: 0.5rem; /* space-x-4 (approx for each side) */
+    margin-right: 0.5rem;
+    color: var(--color-text-medium);
+    text-decoration: none;
+}
+footer.site-footer .social-links a:hover {
+    color: var(--color-purple-dark);
+}

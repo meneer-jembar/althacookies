@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altha Cookies and Cake</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/> 
+    <link rel="icon" href="assets/Logo design.png" type="image/png">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            /* Custom Colors from Reference */
+            --color-peach: #FDE6CE;
+            --color-lavender: #E0D8F7;
+            --color-purple-accent: #7C3AED; 
+            --color-text-dark: #37282C;
+            --color-text-medium: #5F5054;
+            --color-bg-light: #FFFFFF; 
+            --color-footer-bg: #F3F4F6; 
+            overflow-x: hidden; /* Mencegah scroll horizontal */
+        }
+        .font-heading { font-family: 'Playfair Display', serif; }
+        .font-subheading { font-family: 'Poppins', sans-serif; font-weight: 600; }
+
+        /* Apply custom colors */
+        .bg-custom-peach { background-color: var(--color-peach); }
+        .bg-custom-lavender { background-color: var(--color-lavender); }
+        .bg-custom-purple-accent { background-color: var(--color-purple-accent); }
+        .text-custom-purple-accent { color: var(--color-purple-accent); }
+        .border-custom-purple-accent { border-color: var(--color-purple-accent); }
+        .hover-text-custom-purple-accent-darker:hover { color: #6B21A8; } 
+        .hover-bg-custom-purple-accent-darker:hover { background-color: #6B21A8; }
+
+        .text-custom-dark { color: var(--color-text-dark); }
+        .text-custom-medium { color: var(--color-text-medium); }
+        .bg-custom-body { background-color: var(--color-bg-light); }
+        .bg-custom-footer { background-color: var(--color-footer-bg); }
+
+        .playfair-display { font-family: 'Playfair Display', serif; }
+        body.overflow-hidden { padding-right: 0px !important; } /* Prevent scrollbar shift */
+    </style>
+</head>
+<body class="bg-custom-body text-custom-dark">
+
+    <button id="menu-toggle" aria-label="Toggle Menu" class="md:hidden fixed top-5 right-5 z-50 p-2 bg-[#fef9f7] rounded-md shadow-lg text-[#2e1e4a] focus:outline-none focus:ring-2 focus:ring-custom-purple-accent">
+        <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+    </button>
+
+    <nav class="hidden md:flex absolute top-6 left-1/2 -translate-x-1/2 space-x-8 text-[14px] text-[#2e1e4a] font-normal bg-[#fef9f7] px-6 py-1 rounded-md shadow-md z-30">
+        <a href="index.html" class="hover:text-custom-purple-accent">Home</a>
+        <a href="about.html" class="hover:text-custom-purple-accent">About</a>
+        <a href="product.html" class="hover:text-custom-purple-accent">Product</a>
+        <a href="contact.html" class="hover:text-custom-purple-accent">Location</a>
+        <a href="artikel.html" class="hover:text-custom-purple-accent">Artikel</a>
+    </nav>
+
+    <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-[#fef9f7] z-40 flex flex-col items-center justify-center space-y-6 transition-transform duration-300 ease-in-out">
+        <a href="index.html" class="text-[#2e1e4a] hover:text-custom-purple-accent text-xl py-2">Home</a>
+        <a href="about.html" class="text-[#2e1e4a] hover:text-custom-purple-accent text-xl py-2">About</a>
+        <a href="product.html" class="text-[#2e1e4a] hover:text-custom-purple-accent text-xl py-2">Product</a>
+        <a href="contact.html" class="text-[#2e1e4a] hover:text-custom-purple-accent text-xl py-2">Location</a>
+        <a href="artikel.html" class="text-[#2e1e4a] hover:text-custom-purple-accent text-xl py-2">Artikel</a>
+    </div>
+
+    <header class="bg-custom-peach py-12 md:py-20 pt-24 md:pt-32">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-custom-dark mb-4 playfair-display">Selamat Datang di Dunia Manis Altha!</h1>
+            <p class="text-lg md:text-xl text-custom-medium mb-8">Temukan kelezatan cookies dan cake premium, dibuat dengan cinta dan bahan-bahan terbaik.</p>
+            <a href="product.html" class="bg-custom-purple-accent text-white font-semibold px-8 py-3 rounded-lg hover-bg-custom-purple-accent-darker transition duration-300">Lihat Koleksi Kami</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <h2 class="text-3xl font-bold text-center text-custom-purple-accent mb-10 playfair-display">Artikel Terbaru & Terpopuler</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 group">
+                <img src="assets/4.png" alt="Kue Cokelat Lezat" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-semibold text-xl mb-2 text-custom-purple-accent playfair-display group-hover:underline">Baru!: Cake Cokelat Lumer Altha!</h3>
+                    <p class="text-custom-medium text-sm mb-4">Rasakan sensasi lelehan cokelat premium dalam setiap gigitan cake terbaru kami. Cocok untuk...</p>
+                    <a href="Artikel/art-cokelat.html" class="text-custom-purple-accent hover-text-custom-purple-accent-darker font-semibold">Baca Selengkapnya &rarr;</a>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 group">
+                <img src="assets/Catering1.jpg" alt="Layanan Catering Altha Cookies" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-semibold text-xl mb-2 text-custom-purple-accent playfair-display group-hover:underline">Layanan Catering Eksklusif dari Altha Cookies & Cake</h3>
+                    <p class="text-custom-medium text-sm mb-4">Perjalanan kami dalam menciptakan setiap gigitan manis yang Anda nikmati. Sebuah cerita tentang...</p>
+                    <a href="Artikel/art-catering.html" class="text-custom-purple-accent hover-text-custom-purple-accent-darker font-semibold">Baca Selengkapnya &rarr;</a>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 group">
+                <img src="assets/Piscok1.jpg" alt="Pisang Keju Altha" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-semibold text-xl mb-2 text-custom-purple-accent playfair-display group-hover:underline">Pisang Keju Altha: Manis, Gurih, Lumer!</h3>
+                    <p class="text-custom-medium text-sm mb-4">Jangan biarkan cookies favoritmu melempem! Ikuti cara mudah ini untuk menjaga kerenyahannya...</p>
+                    <a href="Artikel/art-Piscok.html" class="text-custom-purple-accent hover-text-custom-purple-accent-darker font-semibold">Baca Selengkapnya &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-custom-footer text-custom-medium py-8 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; <span id="year"></span> Altha Cookies and Cake. Dibuat dengan ❤️.</p>
+            <div class="mt-4 space-x-4">
+                <a href="https://www.instagram.com/althacookies?igsh=aXZjdXphNjZ5bnkx" target="_blank" rel="noopener noreferrer" class="hover:text-custom-purple-accent">Instagram</a>
+                <a href="https://www.tiktok.com/@althacookies?_t=ZS-8wqI5xQQj2n&_r=1" target="_blank" rel="noopener noreferrer" class="hover:text-custom-purple-accent">Tiktok</a>
+                <a href="https://wa.me/6282126602008" target="_blank" rel="noopener noreferrer" class="hover:text-custom-purple-accent">WhatsApp</a> 
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Navbar Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIconOpen = document.getElementById('menu-icon-open');
+        const menuIconClose = document.getElementById('menu-icon-close');
+        const body = document.body;
+
+        if (menuToggle && mobileMenu && menuIconOpen && menuIconClose) {
+          menuToggle.addEventListener('click', () => {
+            const isMenuOpen = !mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden');
+            // Toggle icon visibility based on whether the menu is now open or closed
+            menuIconOpen.classList.toggle('hidden', !isMenuOpen); 
+            menuIconClose.classList.toggle('hidden', isMenuOpen);
+            
+            body.classList.toggle('overflow-hidden', !isMenuOpen);
+          });
+
+          const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+          mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+              mobileMenu.classList.add('hidden');
+              menuIconOpen.classList.remove('hidden'); // Show burger icon
+              menuIconClose.classList.add('hidden');   // Hide close icon
+              body.classList.remove('overflow-hidden'); // Re-enable scroll
+            });
+          });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lokasi Toko - Altha Cookies</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <link rel="icon" href="assets/Logo design.png" type="image/png">
+  <style>
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+    .font-playfair {
+        font-family: 'Playfair Display', serif;
+    }
+    .store-icon {
+        background: linear-gradient(to bottom, #FF89A3, #FF668C);
+        border-radius: 1rem 1rem 0 0;
+        position: relative;
+        width: 150px;
+        height: 75px;
+    }
+    .store-icon::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 75px;
+        background: linear-gradient(to right, #4A90E2, #357ABD);
+        border-radius: 0 0 1rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+      .store-icon::after {
+        content: '';
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 40px;
+        background-color: #A9D0F5;
+        border-radius: 0.5rem;
+        box-shadow: inset 2px 2px 5px rgba(0,0,0,0.1);
+    }
+    body.overflow-hidden { padding-right: 0px !important; }
+  </style>
+  <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    customBeige: '#FBF6F0',
+                    customPurple: '#A78BFA',
+                    customDark: '#3A3A3A',
+                },
+                fontFamily: {
+                    'sans': ['Poppins', 'sans-serif'],
+                    'serif': ['Playfair Display', 'serif'],
+                }
+            }
+        }
+    }
+  </script>
+</head>
+
+<body class="bg-white">
+<div class="relative w-full min-h-screen flex flex-col overflow-x-hidden">
+  <button id="menu-toggle" aria-label="Toggle Menu" class="md:hidden fixed top-5 right-5 z-50 p-2 bg-[#fef9f7] rounded-md shadow-lg text-[#2e1e4a] focus:outline-none focus:ring-2 focus:ring-customPurple">
+      <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+  </button>
+
+  <nav class="hidden md:flex absolute top-6 left-1/2 -translate-x-1/2 space-x-8 text-[14px] text-[#2e1e4a] font-normal bg-[#fef9f7] px-6 py-1 rounded-md shadow-md z-30">
+    <a href="index.html" class="hover:text-customPurple">Home</a>
+    <a href="about.html" class="hover:text-customPurple">About</a>
+    <a href="product.html" class="hover:text-customPurple">Product</a>
+    <a href="contact.html" class="hover:text-customPurple">Location</a>
+    <a href="artikel.html" class="hover:text-customPurple">Artikel</a>
+  </nav>
+
+  <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-[#fef9f7] z-40 flex flex-col items-center justify-center space-y-6 transition-transform duration-300 ease-in-out">
+      <a href="index.html" class="text-[#2e1e4a] hover:text-customPurple text-xl py-2">Home</a>
+      <a href="about.html" class="text-[#2e1e4a] hover:text-customPurple text-xl py-2">About</a>
+      <a href="product.html" class="text-[#2e1e4a] hover:text-customPurple text-xl py-2">Product</a>
+      <a href="contact.html" class="text-[#2e1e4a] hover:text-customPurple text-xl py-2">Location</a>
+      <a href="artikel.html" class="text-[#2e1e4a] hover:text-customPurple text-xl py-2">Artikel</a>
+  </div>
+
+  <main class="flex-grow">
+    <section class="relative h-[530px] flex items-center justify-center bg-cover bg-center" style="background-image: url('assets/Store.png');">
+      <div class="absolute inset-0 bg-black opacity-40"></div>
+      <div class="relative z-10 text-center text-white" data-aos="fade-up">
+        <h1 class="text-white text-4xl md:text-6xl font-bold font-serif">Lokasi Toko</h1>
+      </div>
+    </section>
+
+    <section class="bg-customBeige py-16 md:py-24">
+      <div class="flex flex-col md:flex-row items-center justify-center md:space-x-16 max-w-5xl mx-auto px-4">
+        <div class="mb-8 md:mb-0" data-aos="fade-right">
+          <img src="assets/Icon.png" alt="Ikon Toko Altha Cookies" class="w-48 md:w-72 h-auto">
+        </div>
+        <div class="text-center md:text-left text-customDark" data-aos="fade-left">
+          <h3 class="text-3xl md:text-4xl font-semibold mb-3">Cimahi</h3>
+          <p class="text-base md:text-lg text-gray-600 leading-relaxed hover:text-customPurple transition">
+            <a href="https://maps.app.goo.gl/youdfgr-correct-link" target="_blank" rel="noopener noreferrer"> 
+              MK PGRI Lt. II, Jl. Terusan No.29C, RT.07/03, Cimahi, Kec.<br>
+              Cimahi Tengah, Kota Cimahi, Jawa Barat 40525
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative h-80 md:h-96 bg-cover bg-center" style="background-image: url('assets/5.png');">
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+      <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4" data-aos="zoom-in">
+        <h2 class="text-2xl md:text-4xl font-bold mb-2">Cookies Buatan Hati,</h2>
+        <h2 class="text-2xl md:text-4xl font-bold mb-8">Untuk Hati</h2>
+        <a href="https://wa.me/6282dfgdfgdf126602008" target="_blank" rel="noopener noreferrer" class="bg-customPurple text-white py-3 px-8 rounded-lg text-lg font-semibold mb-6 hover:bg-purple-600 transition duration-300">
+          Hubungi Kami
+        </a>
+        <p class="mb-6 text-sm md:text-base">Hubungi Kami: +62 821 2660 2008</p> 
+        <div class="flex space-x-4">
+          <a href="https://www.tiktok.fgfcom/@althacookies?_t=ZS-8wqI5xQQj2n&_r=1" target="_blank" rel="noopener noreferrer" class="bg-white text-customDark rounded-full p-2 w-10 h-10 flex items-center justify-center hover:bg-gray-200 transition">
+            <i class="fab fa-tiktok"></i> </a>
+          <a href="https://www.instadfgdfgram.com/althacookies?igsh=aXZjdXphNjZ5bnkx" target="_blank" rel="noopener noreferrer" class="bg-white text-customDark rounded-full p-2 w-10 h-10 flex items-center justify-center hover:bg-gray-200 transition">
+            <i class="fab fa-instagram"></i> </a>
+          <a href="https://maps.app.goo.gl/your-correct-link" target="_blank" rel="noopener noreferrer" class="bg-white text-customDark rounded-full p-2 w-10 h-10 flex items-center justify-center hover:bg-gray-200 transition"> 
+              <i class="fas fa-map-marker-alt"></i> </a>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+  AOS.init({
+      duration: 1000, 
+      once: true,
+      offset: 100,
+    });
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIconOpen = document.getElementById('menu-icon-open');
+    const menuIconClose = document.getElementById('menu-icon-close');
+    const body = document.body;
+
+    if (menuToggle && mobileMenu && menuIconOpen && menuIconClose) {
+      menuToggle.addEventListener('click', () => {
+        const isMenuOpen = !mobileMenu.classList.contains('hidden');
+        mobileMenu.classList.toggle('hidden');
+        menuIconOpen.classList.toggle('hidden', !isMenuOpen); 
+        menuIconClose.classList.toggle('hidden', isMenuOpen);
+        
+        body.classList.toggle('overflow-hidden', !isMenuOpen);
+      });
+
+      const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+      mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          menuIconOpen.classList.remove('hidden');
+          menuIconClose.classList.add('hidden');
+          body.classList.remove('overflow-hidden');
+        });
+      });
+    }
+  </script>
+</body>
+</html>

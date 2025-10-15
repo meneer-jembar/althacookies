@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Altha Cookies</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&amp;family=Poppins&amp;display=swap" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <link rel="icon" href="assets/Logo design.png" type="image/png">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
+    .font-playfair {
+      font-family: 'Playfair Display', serif;
+    }
+    .three-d-box {
+      background: linear-gradient(145deg, #f0e7ff, #c6b8ff);
+      box-shadow: 8px 8px 15px #b1a1d6, -8px -8px 15px #fff9ff;
+      border-radius: 12px;
+      transition: box-shadow 0.3s ease;
+    }
+    .three-d-box:hover {
+      box-shadow: 12px 12px 20px #9a8fd1, -12px -12px 20px #fffaff;
+    }
+    .bg-custom-footer {
+     background-color: #f4b895;
+    }
+    .text-custom-medium {
+     color: #2e1e4a;
+    }
+    .hover\:text-custom-purple-accent:hover {
+     color: #a78bfa;
+    }
+    body.overflow-hidden {
+      padding-right: 0px !important;
+    }
+  </style>
+</head>
+<body class="bg-[#fef9f7]">
+  <div class="relative w-full min-h-screen flex flex-col overflow-x-hidden">
+    
+    <button id="menu-toggle" aria-label="Toggle Menu" class="md:hidden fixed top-5 right-5 z-50 p-2 bg-[#fef9f7] rounded-md shadow-lg text-[#2e1e4a] focus:outline-none focus:ring-2 focus:ring-[#a78bfa]">
+      <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+    </button>
+    
+    <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-[#fef9f7] z-40 flex flex-col items-center justify-center space-y-6 transition-transform duration-300 ease-in-out">
+      <a href="index.html" class="text-[#2e1e4a] hover:text-[#a78bfa] text-xl py-2">Home</a>
+      <a href="about.html" class="text-[#2e1e4a] hover:text-[#a78bfa] text-xl py-2">About</a>
+      <a href="product.html" class="text-[#2e1e4a] hover:text-[#a78bfa] text-xl py-2">Product</a>
+      <a href="contact.html" class="text-[#2e1e4a] hover:text-[#a78bfa] text-xl py-2">Location</a>
+      <a href="artikel.html" class="text-[#2e1e4a] hover:text-[#a78bfa] text-xl py-2">Artikel</a>
+    </div>
+
+    <main class="flex-grow">
+      <nav class="hidden md:flex absolute top-6 left-1/2 -translate-x-1/2 flex-wrap justify-center gap-x-4 sm:gap-x-6 lg:gap-x-8 gap-y-2 text-[14px] text-[#2e1e4a] font-normal bg-[#fef9f7] px-6 py-1 rounded-md shadow-md z-30">
+        <a href="index.html" class="hover:text-[#a78bfa]">Home</a>
+        <a href="about.html" class="hover:text-[#a78bfa]">About</a>
+        <a href="product.html" class="hover:text-[#a78bfa]">Product</a>
+        <a href="contact.html" class="hover:text-[#a78bfa]">Location</a>
+        <a href="artikel.html" class="hover:text-[#a78bfa]">Artikel</a>
+      </nav>
+
+      <section class="flex flex-col md:flex-row bg-[#f4b895] relative">
+        <div class="md:w-1/2 p-8 md:p-20 relative flex flex-col justify-between">
+          <h1 class="font-playfair text-[27px] leading-[22px] text-[#2e1e4a] relative mb-12 self-start" data-aos="fade-down">
+            <span class="absolute -top-5 left-0 text-[20px] font-normal">Altha</span>
+            Cookies
+          </h1>
+          <div>
+            <h2 class="text-[#2e1e4a] font-bold text-4xl sm:text-[47px] leading-tight sm:leading-[70px] mb-5 mt-10 sm:mt-19" data-aos="fade-right">
+              Rayakan Momen<br/>Manismu dengan Altha<br/>Cookies
+            </h2>
+            <p class="text-[16px] leading-[18px] text-[#2e1e4a] mb-8 max-w-[700px]" data-aos="fade-right" data-aos-delay="100">
+              Nikmati setiap momen berharga dengan cookies buatan tangan yang dibuat dari bahan pilihan terbaik. Baik untuk hadiah, camilan santai, atau kejutan manis, Altha Cookies selalu siap membuat harimu lebih spesial.
+            </p>
+            <div class="flex space-x-4" data-aos="fade-up" data-aos-delay="200">
+              <button class="bg-gradient-to-r from-[#a78bfa] to-[#c084fc] text-white text-[14px] font-semibold px-5 py-2 rounded shadow-md hover:shadow-lg transition-shadow">
+                <a href="https://wa.link">Pesan Sekarang</a>
+              </button>
+              <button class="bg-white text-[#2e1e4a] text-[12px] font-semibold px-5 py-2 rounded shadow-md hover:shadow-lg transition-shadow">
+                <a href="contact.html">Lihat Lokasi</a>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="md:w-1/2 relative bg-gradient-to-b from-[#a178d9] to-[#b68bd6] flex justify-center items-center p-8 md:p-16" data-aos="fade-left">
+          <div class="relative">
+            <img alt="Banner Altha Cookies" class="w-full max-w-xs sm:max-w-sm h-auto object-cover rounded-tl-[160px] rounded-tr-[160px]" src="assets/produk/banner_logo.png"/>
+            <svg class="absolute top-6 right-6" fill="none" height="100" width="100" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 60C40 40 60 20 80 0" stroke="white" stroke-linecap="round" stroke-width="1"></path>
+            </svg>
+            <svg class="absolute top-10 right-14" fill="none" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 0L9.5 5H15L10 7.5L11.5 13L8 10L4.5 13L6 7.5L1 5H6.5L8 0Z" fill="white"></path>
+            </svg>
+            <div class="absolute bottom-[-20px] right-[-20px] w-16 h-16 rounded-full bg-[#f4b895] opacity-90"></div>
+            <div class="absolute bottom-[-40px] right-[-40px] w-24 h-24 rounded-full bg-[#f4b895] opacity-60"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="flex flex-col md:flex-row items-center justify-center md:justify-center bg-gradient-to-r from-[#a178d9] to-[#f4b895] mt-[-4px] p-6 md:p-8 rounded-b-md three-d-box max-w-[900px] w-full mx-auto text-center space-y-6 md:space-y-0 md:space-x-12" data-aos="zoom-in-up">
+        <div class="bg-white bg-opacity-30 backdrop-blur-sm rounded-md px-6 py-3 max-w-[320px] mx-auto">
+          <h3 class="text-white font-semibold text-[12px] leading-[16px] uppercase mb-1">DIPERCAYA RIBUAN PELANGGAN</h3>
+          <p class="text-[#d6c9f7] text-[8px] leading-[12px] font-light">Rasakan Kelezatan Cookies Premium Buatan Alami</p>
+        </div>
+        <div class="flex flex-col md:flex-row gap-6 md:gap-12 text-[8px] leading-[12px] text-[#2e1e4a] font-normal text-center">
+          <div>
+            <p class="font-semibold text-[20px] leading-[14px] mb-1">500+</p>
+            <p>Cookies Fresh Dibuat Setiap Hari</p>
+          </div>
+          <div>
+            <p class="font-semibold text-[20px] leading-[14px] mb-1">100+ Kota</p>
+            <p>Dikirim ke Seluruh Indonesia</p>
+          </div>
+          <div>
+            <p class="font-semibold text-[20px] leading-[14px] mb-1">10.000+</p>
+            <p>Pelanggan Puas Sejak 2023</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-[#FEF6F0] py-20 px-6 sm:px-10 md:px-20 lg:px-24 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 mt-20">
+        <img alt="Cornflakes cookies premium Altha" class="w-full max-w-xs md:max-w-sm flex-shrink-0" data-aos="fade-right" src="assets/Untitled design (33).png"/>
+        <div class="max-w-xl text-center md:text-left" data-aos="fade-left">
+          <h2 class="font-extrabold text-2xl md:text-3xl leading-tight text-black mb-4">Pilihan Terbaik Untuk<br/>Setiap Kenangan</h2>
+          <p class="text-sm md:text-base text-[#1a1a1a] mb-4">Selamat datang di Altha Cookies &amp; Cake, rumah bagi aneka kue dan cookies lezat yang dibuat dengan sepenuh hati. Berdiri dari kecintaan kami terhadap dunia baking, Altha hadir untuk menghadirkan momen manis dalam setiap gigitan.</p>
+          <p class="text-sm md:text-base text-[#1a1a1a] mb-6">Di Altha Cookies &amp; Cake, kami mengutamakan rasa, kualitas, dan pelayanan. Semua produk kami dibuat secara homemade dengan sentuhan cinta, tanpa pengawet, dan selalu dalam kondisi fresh.</p>
+          <a href="product.html">
+            <button class="bg-purple-400 text-white text-sm px-6 py-2.5 rounded-md hover:bg-purple-500 transition">Lihat Katalog</button>
+          </a>
+        </div>
+      </section>
+
+      <div class="flex justify-center items-start py-16 px-4" style="background: linear-gradient(90deg, #f9d6c0 0%, #d6b4d9 100%)">
+        <div class="max-w-6xl w-full">
+          <h2 class="text-white font-extrabold text-center text-xl sm:text-2xl md:text-3xl mb-12" data-aos="fade-up">Produk Unggulan Kami</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-10">
+            <div class="flex flex-col items-center text-center" data-aos="fade-up">
+              <div class="w-full relative rounded-2xl shadow-lg overflow-hidden pt-[125%]">
+                <img alt="Kue Kaastengels" class="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 hover:scale-105" src="assets/produk/kaastengels.jpg"/>
+              </div>
+              <h3 class="text-white font-semibold mt-4 text-sm sm:text-base">Kue Kering | kaasTengels</h3>
+              <a href="https://wa.link/" target="_blank" rel="noopener noreferrer" class="inline-block bg-gradient-to-r from-[#a78bfa] to-[#c084fc] text-white text-xs font-semibold px-4 py-2 rounded shadow-md hover:shadow-lg transition-shadow mt-3">Beli Sekarang</a>
+            </div>
+            <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="100">
+              <div class="w-full relative rounded-2xl shadow-lg overflow-hidden pt-[125%]">
+                <img alt="Kue Kacang" class="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 hover:scale-105" src="assets/produk/kurjang kur kacang.jpg"/>
+              </div>
+              <h3 class="text-white font-semibold mt-4 text-sm sm:text-base">Kue Kering | Kurcang Kue Kacang</h3>
+              <a href="https://wa.link/" target="_blank" rel="noopener noreferrer" class="inline-block bg-gradient-to-r from-[#a78bfa] to-[#c084fc] text-white text-xs font-semibold px-4 py-2 rounded shadow-md hover:shadow-lg transition-shadow mt-3">Beli Sekarang</a>
+            </div>
+            <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="200">
+              <div class="w-full relative rounded-2xl shadow-lg overflow-hidden pt-[125%]">
+                <img alt="Kue Salju Mete" class="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 hover:scale-105" src="assets/produk/salju_mete.jpg"/>
+              </div>
+              <h3 class="text-white font-semibold mt-4 text-sm sm:text-base">Kue Acara | Salju Mete</h3>
+              <a href="https://wa.link/" target="_blank" rel="noopener noreferrer" class="inline-block bg-gradient-to-r from-[#a78bfa] to-[#c084fc] text-white text-xs font-semibold px-4 py-2 rounded shadow-md hover:shadow-lg transition-shadow mt-3">Beli Sekarang</a>
+            </div>
+            <div class="flex flex-col items-center text-center" data-aos="fade-up">
+              <div class="w-full relative rounded-2xl shadow-lg overflow-hidden pt-[125%]">
+                <img alt="Kue Keju" class="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 hover:scale-105" src="assets/Kue Keju.png"/>
+              </div>
+              <h3 class="text-white font-semibold mt-4 text-sm sm:text-base">Kue Kering | Kue Keju</h3>
+              <a href="https://wa.link/04niln" target="_blank" rel="noopener noreferrer" class="inline-block bg-gradient-to-r from-[#a78bfa] to-[#c084fc] text-white text-xs font-semibold px-4 py-2 rounded shadow-md hover:shadow-lg transition-shadow mt-3">Beli Sekarang</a>
+            </div>
+            <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="100">
+              <div class="w-full relative rounded-2xl shadow-lg overflow-hidden pt-[125%]">
+                  <img alt="Kue Cornflakes" class="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 hover:scale-105" src="assets/produk/Cornflakes.jpg"/>
+              </div>
+              <h3 class="text-white font-semibold mt-4 text-sm sm:text-base">Kue Kering | Cornflakes</h3>
+              <a href="https://wa.link/" target="_blank" rel="noopener noreferrer" class="inline-block bg-gradient-to-r from-[#a78bfa] to-[#c084fc] text-white text-xs font-semibold px-4 py-2 rounded shadow-md hover:shadow-lg transition-shadow mt-3">Beli Sekarang</a>
+            </div>
+            <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="200">
+              <div class="w-full relative rounded-2xl shadow-lg overflow-hidden pt-[125%]">
+                  <img alt="Custom Bolu" class="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 hover:scale-105" src="assets/Custom Kue.png"/>
+              </div>
+              <h3 class="text-white font-semibold mt-4 text-sm sm:text-base">Custom Bolu</h3>
+              <a href="https://wa.link/" target="_blank" rel="noopener noreferrer" class="inline-block bg-gradient-to-r from-[#a78bfa] to-[#c084fc] text-white text-xs font-semibold px-4 py-2 rounded shadow-md hover:shadow-lg transition-shadow mt-3">Beli Sekarang</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="py-16 max-w-7xl mx-auto px-6">
+        <h2 class="text-center font-semibold text-[22px] leading-[28px] text-black mb-12" data-aos="fade-up">Kenapa Memilih Kita?</h2>
+        <div class="flex flex-col sm:flex-row justify-center gap-8 max-w-5xl mx-auto">
+          <div class="border rounded-md p-8 flex flex-col items-center text-center max-w-xs mx-auto" data-aos="fade-up" data-aos-delay="0" style="border-image-slice: 1; border-image-source: linear-gradient(to bottom, #b88fca, #d9a18f, #d9a18f); border-width: 1px; border-style: solid;">
+            <i class="fas fa-palette text-[#b88fca] text-3xl mb-4"></i>
+            <h3 class="font-extrabold text-[13px] leading-[16px] mb-2">Crafted with Care</h3>
+            <p class="text-[10px] leading-[14px] text-[#7f7f7f] max-w-[180px]">Setiap cookies dibuat secara teliti dengan resep pilihan dan kualitas terbaik.</p>
+          </div>
+          <div class="border rounded-md p-8 flex flex-col items-center text-center max-w-xs mx-auto" data-aos="fade-up" data-aos-delay="100" style="border-image-slice: 1; border-image-source: linear-gradient(to bottom, #b88fca, #d9a18f, #d9a18f); border-width: 1px; border-style: solid;">
+            <i class="fas fa-award text-[#b88fca] text-3xl mb-4"></i>
+            <h3 class="font-extrabold text-[13px] leading-[16px] mb-2">Taste You Can Trust</h3>
+            <p class="text-[10px] leading-[14px] text-[#7f7f7f] max-w-[180px]">Kombinasi sempurna antara rasa, tekstur, dan aroma yang konsisten memanjakan lidah.</p>
+          </div>
+          <div class="border rounded-md p-8 flex flex-col items-center text-center max-w-xs mx-auto" data-aos="fade-up" data-aos-delay="200" style="border-image-slice: 1; border-image-source: linear-gradient(to bottom, #b88fca, #d9a18f, #d9a18f); border-width: 1px; border-style: solid;">
+            <i class="fas fa-building text-[#b88fca] text-3xl mb-4"></i>
+            <h3 class="font-extrabold text-[13px] leading-[16px] mb-2">Nationwide Reach</h3>
+            <p class="text-[10px] leading-[14px] text-[#7f7f7f] max-w-[180px]">Telah dipercaya pelanggan dari lebih dari 100 kota di Indonesia.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-custom-footer text-custom-medium py-8 mt-auto">
+      <div class="container mx-auto px-6 text-center">
+        <p>&copy; <span id="year"></span> Altha Cookies and Cake. Dibuat dengan ❤️.</p>
+        <div class="mt-4 space-x-4">
+          <a href="https://www.instagram.com/althacookies?igsh=aXZjdXphNjZ5bnkx" class="hover:text-custom-purple-accent" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.tiktok.com/@althacookies?_t=ZS-8wqI5xQQj2n&_r=1" class="hover:text-custom-purple-accent" target="_blank" rel="noopener noreferrer">Tiktok</a>
+          <a href="https://wa.link/" class="hover:text-custom-purple-accent" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: false,
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIconOpen = document.getElementById('menu-icon-open');
+    const menuIconClose = document.getElementById('menu-icon-close');
+    const body = document.body;
+
+    if (menuToggle && mobileMenu && menuIconOpen && menuIconClose) {
+      menuToggle.addEventListener('click', () => {
+        const isMenuOpen = !mobileMenu.classList.contains('hidden');
+        mobileMenu.classList.toggle('hidden');
+        menuIconOpen.classList.toggle('hidden', !isMenuOpen);
+        menuIconClose.classList.toggle('hidden', isMenuOpen);
+        body.classList.toggle('overflow-hidden', !isMenuOpen);
+      });
+
+      const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+      mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          menuIconOpen.classList.remove('hidden');
+          menuIconClose.classList.add('hidden');
+          body.classList.remove('overflow-hidden');
+        });
+      });
+    }
+  </script>
+</body>
+</html>
